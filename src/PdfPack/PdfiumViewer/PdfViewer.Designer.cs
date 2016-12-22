@@ -40,6 +40,7 @@ namespace PdfiumViewer
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this._zoomInButton = new System.Windows.Forms.ToolStripButton();
             this._zoomOutButton = new System.Windows.Forms.ToolStripButton();
+            this._renderer = new PdfRenderer();
             this._container.Panel1.SuspendLayout();
             this._container.SuspendLayout();
             this._toolStrip.SuspendLayout();
