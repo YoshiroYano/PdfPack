@@ -137,9 +137,9 @@ namespace PdfiumViewer
             using (var form = new SaveFileDialog())
             {
                 form.DefaultExt = ".pdf";
-                form.Filter = Properties.Resources.SaveAsFilter;
+                form.Filter = PdfPack.Properties.Resources.SaveAsFilter;
                 form.RestoreDirectory = true;
-                form.Title = Properties.Resources.SaveAsTitle;
+                form.Title = PdfPack.Properties.Resources.SaveAsTitle;
                 form.FileName = DefaultDocumentName;
 
                 if (form.ShowDialog(FindForm()) == DialogResult.OK)
@@ -152,8 +152,8 @@ namespace PdfiumViewer
                     {
                         MessageBox.Show(
                             FindForm(),
-                            Properties.Resources.SaveAsFailedText,
-                            Properties.Resources.SaveAsFailedTitle,
+                            PdfPack.Properties.Resources.SaveAsFailedText,
+                            PdfPack.Properties.Resources.SaveAsFailedTitle,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error
                         );

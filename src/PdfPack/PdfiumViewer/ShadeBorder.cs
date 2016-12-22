@@ -12,14 +12,14 @@ namespace PdfiumViewer
         public static readonly Padding Size = new Padding(4);
 
         private bool _disposed;
-        private TextureBrush _n = new TextureBrush(Properties.Resources.ShadeBorder_N, WrapMode.Tile);
-        private Image _ne = Properties.Resources.ShadeBorder_NE;
-        private TextureBrush _e = new TextureBrush(Properties.Resources.ShadeBorder_E, WrapMode.Tile);
-        private Image _se = Properties.Resources.ShadeBorder_SE;
-        private TextureBrush _s = new TextureBrush(Properties.Resources.ShadeBorder_S, WrapMode.Tile);
-        private Image _sw = Properties.Resources.ShadeBorder_SW;
-        private TextureBrush _w = new TextureBrush(Properties.Resources.ShadeBorder_W, WrapMode.Tile);
-        private Image _nw = Properties.Resources.ShadeBorder_NW;
+        private TextureBrush _n = new TextureBrush(PdfPack.Properties.Resources.ShadeBorder_N, WrapMode.Tile);
+        private Image _ne = PdfPack.Properties.Resources.ShadeBorder_NE;
+        private TextureBrush _e = new TextureBrush(PdfPack.Properties.Resources.ShadeBorder_E, WrapMode.Tile);
+        private Image _se = PdfPack.Properties.Resources.ShadeBorder_SE;
+        private TextureBrush _s = new TextureBrush(PdfPack.Properties.Resources.ShadeBorder_S, WrapMode.Tile);
+        private Image _sw = PdfPack.Properties.Resources.ShadeBorder_SW;
+        private TextureBrush _w = new TextureBrush(PdfPack.Properties.Resources.ShadeBorder_W, WrapMode.Tile);
+        private Image _nw = PdfPack.Properties.Resources.ShadeBorder_NW;
 
         public void Draw(Graphics graphics, Rectangle bounds)
         {

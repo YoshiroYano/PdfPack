@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -19,7 +20,7 @@ namespace PdfiumViewer
         {
             Application.AddMessageFilter(new WheelFilter());
 
-            using (var stream = typeof(PanningZoomingScrollControl).Assembly.GetManifestResourceStream(typeof(PanningZoomingScrollControl).Namespace + ".pan.cur"))
+            using (var stream = new MemoryStream(PdfPack.Properties.Resources.pan))
             {
                 PanCursor = new Cursor(stream);
             }
@@ -280,6 +281,17 @@ namespace PdfiumViewer
                 NativeMethods.SendMessage(control.Handle, m.Msg, m.WParam, m.LParam);
                 return true;
             }
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // PanningZoomingScrollControl
+            // 
+            this.Text = "7";
+            this.ResumeLayout(false);
+
         }
     }
 }
